@@ -10,7 +10,12 @@ Please provide brief instructions on how to use your application. We are a test 
 
 ## Overview
 
-![Logo](img/chromatic_logo.png)
+![](https://img.shields.io/badge/Tests-Passing-greenyellow)
+![](https://img.shields.io/badge/Coverage-82%25-aquamarine)
+
+<p align="center">
+    <img alt="Logo" src="img/chromatic_logo.png" width="500" />
+</p>
 
 This challenge was completed by building a stand-alone **Django** application called **Chromatic**. Try out the demo [here](https://devpostman404.pythonanywhere.com/).
 
