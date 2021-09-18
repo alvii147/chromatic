@@ -1,0 +1,43 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "chromatic_app/includes/head.html" %}
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/global_styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/login.css' %}">
+        <title>Login</title>
+    </head>
+    <body>
+        {% include "chromatic_app/includes/navbar.html" %}
+        {% include "chromatic_app/includes/messages.html" %}
+        <div class="container mainContainer">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="form-content">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Log in to your account</legend>
+                                {{ form|crispy }}
+                            </fieldset>
+                            <div class="form-group">
+                                <button class="special-button" type="submit">Login</button>
+                            </div>
+                        </form>
+                        <div class="border-top pt-3">
+                            <small class="text-muted">
+                                Don't have an account? <a class="ml-2" href="{% url 'chromatic_app_register' %}"> Sign Up</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    {% include "chromatic_app/includes/afghanistan_donation.html" %}
+                </div>
+            </div>
+        </div>
+            {% include "chromatic_app/includes/scripts.html" %}
+    </body>
+</html>

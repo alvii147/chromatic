@@ -1,0 +1,11 @@
+.navbar-bg {
+    background-image: linear-gradient(to right, #7a0937, #5f1d2a);
+}
+#navbarStuff {
+    color: #ffffff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+#navbarStuff:hover {
+    opacity: 1.0;
+}

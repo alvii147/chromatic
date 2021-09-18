@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "chromatic_app/includes/head.html" %}
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/global_styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/logout.css' %}">
+        <title>Logout</title>
+    </head>
+    <body>
+        {% include "chromatic_app/includes/navbar.html" %}
+        {% include "chromatic_app/includes/messages.html" %}
+        <div class="container mainContainer">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="form-content">
+                        <h1 class="display-5">You have been logged out.</h1>
+                        <div class="border-top pt-3">
+                            <small class="text-muted">
+                                <a class="ml-2" href="{% url 'chromatic_app_login' %}">Log In Again</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-20">
+                    {% include "chromatic_app/includes/afghanistan_donation.html" %}
+                </div>
+            </div>
+        </div>
+        {% include "chromatic_app/includes/scripts.html" %}
+    </body>
+</html>

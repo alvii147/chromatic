@@ -1,0 +1,124 @@
+body {
+    background-color: #090d1d;
+}
+h1, h2, h3, h4, h5, h6, p, legend, label, small {
+    color: #b1b1b1;
+}
+
+.mainContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+:root {
+    --white: #FFFFFF;
+    --green: #1AD98D;
+    --red: #FF3300;
+    --orange: #FF9933;
+    --blue: #0066FF;
+    --yellow: #FFDD00;
+    --pink: #FF3399;
+}
+
+button {
+    transition: 0.3s;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+.green-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+}
+.green-button:hover {
+    color: var(--white);
+    background-color: var(--green);
+}
+.red-button {
+    color: var(--red);
+    background-color: transparent;
+    border: 1px solid var(--red);
+}
+.red-button:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+.orange-button {
+    color: var(--orange);
+    background-color: transparent;
+    border: 1px solid var(--orange);
+}
+.orange-button:hover {
+    color: var(--white);
+    background-color: var(--orange);
+}
+.blue-button {
+    color: var(--blue);
+    background-color: transparent;
+    border: 1px solid var(--blue);
+}
+.blue-button:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+.yellow-button {
+    color: var(--yellow);
+    background-color: transparent;
+    border: 1px solid var(--yellow);
+}
+.yellow-button:hover {
+    color: var(--white);
+    background-color: var(--yellow);
+}
+.pink-button {
+    color: var(--pink);
+    background-color: transparent;
+    border: 1px solid var(--pink);
+}
+.pink-button:hover {
+    color: var(--white);
+    background-color: var(--pink);
+}
+.special-button {
+    color: var(--white);
+    background-image: linear-gradient(to right, #853052, #9e232d);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    opacity: 1.0;
+}
+.special-button:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.form-content {
+    padding: 10px 20px;
+    border: 1px solid #858585;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    max-width: 700px;
+}
+.form-group {
+    padding-bottom: 10px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    color: #ebebeb;
+    background-color: #292929;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    color: #ebebeb;
+    background-color: #474747;
+    animation: formGlow 2s linear infinite;
+}
+@keyframes formGlow {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+    100% {
+        box-shadow: none;
+    }
+}

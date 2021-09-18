@@ -1,0 +1,78 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "chromatic_app/includes/head.html" %}
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/global_styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'chromatic_app/css/home.css' %}">
+        <title>Chromatic Home Page</title>
+    </head>
+    <body>
+        {% include "chromatic_app/includes/navbar.html" %}
+        {% include "chromatic_app/includes/messages.html" %}
+        <div class="container mainContainer">
+            <div class="row">
+                <div class="col-md-10">
+                    <h2>Explore stories from around the world</h2>
+                    <div class="cardsContainer">
+                        {% for post in posts %}
+                            <div class="card cardMain" onclick="showImageModal('imageModal{{ post.id }}')">
+                                <img class="card-img-top cardImage" src="{{ post.image.url }}" />
+                                <div class="card-body cardBody">
+                                    <div class="cardUserContainer">
+                                        <div class="cardAvatarContainer">
+                                            <img class="cardAvatar" alt="avatar" src="https://avatars.dicebear.com/api/jdenticon/{{ post.uploader.id }}.svg" />
+                                        </div>
+                                        <div class="cardTextContainer">
+                                            <h6 class="card-title">{{ post.uploader.get_username }}</h6>
+                                            <h6 class="card-subtitle mb-2 text-muted cardSubtitle">{{ post.upload_date|naturaltime }}</h6>
+                                        </div>
+                                    </div>
+                                    <p class="card-text cardText"><i>{{ post.caption }}</i></p>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="imageModal{{ post.id }}" tabindex="-1" role="dialog" aria-labelledby="imageModal{{ post.id }}" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="imageModalHeading{{ post.id }}">Facial Recognition</h5>
+                                            <button type="button" class="close" style="border: none; border-radius: 15px;" data-dismiss="modal" aria-label="Close" onclick="hideImageModal('imageModal{{ post.id }}')">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body imageModalBody">
+                                            <img id="imageModalImg" alt="" src="{{ post.image.url }}" />
+                                            {% for face in post.face_set.all %}
+                                                <div class="box" style="top: {{ face.topLeftY }}%; left: {{ face.topLeftX }}%; width: {{ face.width }}%; height: {{ face.height }}%;"></div>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="hideImageModal()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <p><br />Oops! Nothing here yet! :(</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    {% include "chromatic_app/includes/afghanistan_donation.html" %}
+                </div>
+            </div>
+        </div>
+        <script>
+            function showImageModal(modalName) {
+                $('#' + modalName).modal('show');
+            }
+
+            function hideImageModal(modalName) {
+                $('#' + modalName).modal('hide');
+            }
+        </script>
+        {% include "chromatic_app/includes/scripts.html" %}
+    </body>
+</html>
