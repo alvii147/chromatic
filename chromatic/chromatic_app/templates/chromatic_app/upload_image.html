@@ -18,11 +18,11 @@
                         {% csrf_token %}
                         <div class="form-group m-3">
                             <label>Caption</label>
-                            <input name="caption" type="text" class="form-control" placeholder="Enter a caption for the image" />
+                            <input name="caption" type="text" class="form-control" placeholder="Enter a caption for the image" required />
                         </div>
                         <div class="form-group m-3">
                             <label>Choose image file</label>
-                            <input name="imagefile" type="file" class="form-control-file" />
+                            <input name="imagefile" type="file" class="form-control-file" required />
                         </div>
                         <div class="form-group">
                             <button class="special-button" type="submit">Upload</button>
