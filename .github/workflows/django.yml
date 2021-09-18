@@ -25,6 +25,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+    - name: Setup Environment
+      run: |
+        export DJANGO_ENV_MODE="DEV"
+        export SECRET_KEY="qwertyuiopasdfghjklzxcvbnm1234567890"
     - name: Apply migrations
       run: |
         cd chromatic
@@ -32,3 +36,4 @@ jobs:
     - name: Run Tests
       run: |
         coverage run --source='.' manage.py test -v 2
+        coverage report
