@@ -34,5 +34,6 @@ jobs:
         python manage.py migrate
     - name: Run Tests
       run: |
+        cd chromatic
         coverage run --source='.' manage.py test -v 2
         coverage report
