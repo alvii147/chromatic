@@ -1,21 +1,15 @@
-# Shopify Developer Intern Challenge - Winter 2022
+<p align="center">
+  <img alt="Chromatic Logo" src="img/chromatic_logo.png" width="400">
+</p>
 
-## Task
-
-Build an image repository.
-
-You can tackle this challenge using any technology you want. This is an open-ended task.
-
-Please provide brief instructions on how to use your application. We are a test driven environment, so ensure your challenge includes tests. Provide brief instructions on how to use your application, so that someone could use your application and understand how it works.
+# chromatic
 
 ## Overview
 
 ![](https://img.shields.io/badge/Tests-Passing-greenyellow)
 ![](https://img.shields.io/badge/Coverage-82%25-aquamarine)
 
-<p align="center">
-    <img alt="Logo" src="img/chromatic_logo.png" width="500" />
-</p>
+*chromatic* is a public image repository website. It allows users to authenticate themselves and upload images. *chromatic* also performs facial detection on uploaded images. This was a part of the **Shopify Fall 2022 Data Engineering Intern Challenge.**
 
 This challenge was completed by building a stand-alone **Django** application called **Chromatic**. Try out the demo [here](https://devpostman404.pythonanywhere.com/).
 
