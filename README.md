@@ -30,7 +30,7 @@ The instructions below are for using the Chromatic app on a local machine.
 ### Clone the repository
 
 ```bash
-git clone https://github.com/alvii147/ShopifyChallengeW22.git
+git clone https://github.com/alvii147/chromatic.git
 ```
 
 ### Install dependencies
