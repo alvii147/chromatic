@@ -11,7 +11,7 @@
 
 *chromatic* is a public image repository website. It allows users to authenticate themselves and upload images. *chromatic* also performs facial detection on uploaded images. This was a part of the **Shopify Fall 2022 Data Engineering Intern Challenge.**
 
-This challenge was completed by building a stand-alone **Django** application called **Chromatic**. Try out the demo [here](https://devpostman404.pythonanywhere.com/).
+This challenge was completed by building a stand-alone **Django** application. Try out the demo [here](https://devpostman404.pythonanywhere.com/).
 
 ![Homepage](img/homepage_unauthenticated.png)
 
@@ -25,7 +25,7 @@ Clicking on an individual image will launch a modal that displays the picture, w
 
 ## Try it out locally
 
-The instructions below are for using the Chromatic app on a local machine.
+The instructions below are for running *chromatic* on a local machine.
 
 ### Clone the repository
 
@@ -63,7 +63,7 @@ The server should then be up at `http://localhost:8000`.
 
 ## Testing
 
-Currently Chromatic is run through rigorous testing, including unit tests for Django URLs, views, as well as OpenCV functions, under Python 3.7, 3.8, and 3.9 environments. [This Github Actions CI script](.github/workflows/django.yml) is used for automated testing on Github. Currently **100% of tests are passing**, while **test coverage is 82%** (coverage is not perfect due to a few default Django files that are not covered in tests).
+Currently *chromatic* is run through rigorous testing, including unit tests for Django URLs, views, as well as OpenCV functions, under Python 3.7, 3.8, and 3.9 environments. [This Github Actions CI script](.github/workflows/django.yml) is used for automated testing on Github. Currently **100% of tests are passing**, while **test coverage is 82%** (coverage is not perfect due to a few default Django files that are not covered in tests).
 
 ### Running tests and coverage
 
