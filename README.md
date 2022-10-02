@@ -1,7 +1,7 @@
 <div align="center">
 <img alt="Chromatic Logo" src="img/chromatic_logo.png" width="400">
 
-[![](https://img.shields.io/github/workflow/status/alvii147/chromatic/Django%20CI?label=Tests&logo=github)](https://github.com/alvii147/chromatic/actions/workflows) ![](https://img.shields.io/badge/Coverage-82%25-aquamarine?logo=python) [![](https://img.shields.io/badge/Python%20Anywhere-Live%20Demo-37a7d7)](https://github.com/alvii147/chromatic/actions/workflows)
+[![](https://img.shields.io/github/workflow/status/alvii147/chromatic/Django%20CI?label=Tests&logo=github)](https://github.com/alvii147/chromatic/actions) ![](https://img.shields.io/badge/Coverage-82%25-aquamarine?logo=python) [![](https://img.shields.io/badge/Python%20Anywhere-Live%20Demo-37a7d7)](https://devpostman404.pythonanywhere.com/)
 
 </div>
 
