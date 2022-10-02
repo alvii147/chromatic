@@ -1,13 +1,13 @@
-<p align="center">
-  <img alt="Chromatic Logo" src="img/chromatic_logo.png" width="400">
-</p>
+<div align="center">
+<img alt="Chromatic Logo" src="img/chromatic_logo.png" width="400">
+
+[![](https://img.shields.io/github/workflow/status/alvii147/chromatic/Django%20CI?label=Tests&logo=github)](https://github.com/alvii147/chromatic/actions/workflows) ![](https://img.shields.io/badge/Coverage-82%25-aquamarine?logo=python) [![](https://img.shields.io/badge/Python%20Anywhere-Live%20Demo-37a7d7)](https://github.com/alvii147/chromatic/actions/workflows)
+
+</div>
 
 # chromatic
 
 ## Overview
-
-![](https://img.shields.io/badge/Tests-Passing-greenyellow)
-![](https://img.shields.io/badge/Coverage-82%25-aquamarine)
 
 *chromatic* is a public image repository website. It allows users to authenticate themselves and upload images. *chromatic* also performs facial detection on uploaded images. This was a part of the **Shopify Fall 2022 Data Engineering Intern Challenge.**
 
